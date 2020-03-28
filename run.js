@@ -35,9 +35,9 @@ async function doRun(proxy,proto='http')
 				+ "if (shortLink){"
 				+ "for (var i = 0; i < shortLink.length; i++){(shortLink[i]).click();}"  
 				 +" clearInterval(monitor);}},100);</script></body></html>";
-		//await page.setContent(html);
-        await page.goto( "https://www.google.com/search?q=myip&rlz=1C1CHBD_enZA874ZA874&oq=my&aqs=chrome.0.69i59j69i57j69i59l2j69i60l2j69i61j69i60.2565j0j8&sourceid=chrome&ie=UTF-8" 
-             ,{ waitUntil: 'networkidle0',timeout:75000 });		
+		await page.setContent(html);
+       // await page.goto( "https://www.google.com/search?q=myip&rlz=1C1CHBD_enZA874ZA874&oq=my&aqs=chrome.0.69i59j69i57j69i59l2j69i60l2j69i61j69i60.2565j0j8&sourceid=chrome&ie=UTF-8" 
+       //      ,{ waitUntil: 'networkidle0',timeout:75000 });		
 		await sleep(20 * 1000);
 	}catch(err)
     {
@@ -47,7 +47,7 @@ async function doRun(proxy,proto='http')
         {
            console.log(" ----- > ERR HTTP TUNNEL ---> CALL doRun AGAIN");
            await browser.close(); 
-		   return;
+		 //  return;
 		   if (proto == 'http')
 			await doRun(proxy,'https');
 		   if (proto == 'https')
