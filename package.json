@@ -1,0 +1,28 @@
+{
+	"name": "short-links",
+	"version": "0.0.1",
+	"description": "Clicking on short links for some change",
+	"engines": {
+		"node": "11.12.0"
+	},
+	"dependencies": {
+		"fs-extra": "^8.1.0",
+		"googleapis": "^39.2.0",
+		"puppeteer": "latest",
+		"puppeteer-extra": "^2.1.3",
+		"puppeteer-extra-plugin-anonymize-ua": "latest",
+		"puppeteer-extra-plugin-stealth": "latest",
+		"request": "latest",
+		"tree-kill": "latest",
+		"chalk": "latest",
+		"child_process": "latest",
+		"proxy-chain": "latest"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server.js"
+	},
+	"author": "fx2go4u@gmail.com",
+	"license": "ISC"
+}
